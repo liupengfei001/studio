@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>添加个人工作室信息</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/messageEdit.css"/>
+    <script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/form.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/messageAdd.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	function back(){
+			window.history.back(-1)
+		}
+    </script>
+</head>
+<body>
+	<div class="messageEdit" style=" -webkit-tap-highlight-color: transparent; -webkit-focus-ring-color: transparent;">
+		<div class="mEdit_userInfo">
+			<div class="mui-input-row mEdit_userHeaderImg">
+				<label><span class="blue">*</span>头像</label>
+				<img src="img/mEdit_headerImg.png" class="right mEdit_headerImg" />
+				<form id="mEdit_headerImgForm" method="post" style="text-align:center;" enctype="multipart/form-data">  
+		    		<input type="file" id="file_mEdit_headerImg" name="file" accept="image/*" />
+			       	<input id="submits_mEdit_headerImg" type="submit" />
+			 	</form>
+			</div>
+			<p class="mui-input-row">
+		        <label><span class="blue">*</span>工作室名称</label>
+		        <input type="text" class="mui-input-clear" maxlength="10" id="mEdit_userStudio" placeholder="请输入工作室名称">
+		    </p>
+		    <p class="mui-input-row">
+		        <label><span class="blue">*</span>姓名</label>
+		        <input type="text" class="mui-input-clear" maxlength="10" id="mEdit_userName" placeholder="请输入姓名">
+		    </p>
+		    <p class="mui-input-row">
+		        <label><span class="blue">*</span>手机号码</label>
+		        <b class="mui-input-clear" id="mEdit_userTel"></b>
+		    </p>
+		</div>
+		<div class="mEdit_userInfo mEdit_userCompanyInfo">
+		    <p class="mEdit_userCompanyBox mEdit_userSignBox">
+		        <label><span class="blue">*</span>个人签名</label>
+		        <span class="mEdit_changeBtn">选一个</span>
+		        <p class="mui-input-row" id="mEdit_userSignInfoP">
+		        	<input type="text" class="mui-input-clear" id="mEdit_userSignInfo" maxlength="20" placeholder="请输入个人签名(20字)"/>
+		        </p>
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>个人介绍</label>
+		        <textarea rows="3" maxlength="200" id="mEdit_userDes" placeholder="请输入个人介绍（200字）"></textarea>
+		    </p>
+		    <p class="mEdit_userCompanyBox mEdit_userImgP">
+		        <label class="a">个人风采</label>
+		        <div class="mEdit_userImgBox">
+			        <span class="mEdit_appendBtn">
+			        	<img src="img/mEdit_add.png" class="mEdit_addImg" />
+			        	<form  id="mEdit_userImgForm" method="post" style="text-align:center;" enctype="multipart/form-data">  
+				    		<input type="file" id="file_mEdit_userImg" name="file" accept="image/*" />
+					       	<input id="submits_mEdit_userImg" type="submit" />
+					 	</form>
+			        </span>
+		        </div>
+		    </p>
+		</div>
+		<div class="mEdit_userHonorInfo">
+			<div class="mEdit_userHonor">
+		        <p class="mEdit_userHonorTitle">获得荣誉</p>
+		        <div class="mEdit_userHonorBox clearFloat">
+		        	
+		        </div>
+		    </div>
+		</div>
+		<div class="mEdit_userInfo mEdit_userCompanyInfo">
+			<p class="mui-input-row">
+		        <label>所在公司</label>
+		        <input type="text" class="mui-input-clear" id="mEdit_userCompanyName" maxlength="20" placeholder="请输入公司名称">
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>公司简介</label>
+		        <textarea rows="3" maxlength="200" id="mEdit_userCompanyDes" placeholder="请输入公司简介（200字）"></textarea>
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>工作成绩</label>
+		        <textarea rows="3" maxlength="200" id="mEdit_spBehavior" placeholder="请输入工作成绩（200字）"></textarea>
+		    </p>
+		</div>
+		<p class="mAdd_nextBox" id="mAdd_nextBox"><span class="mAdd_nextBtn">下一步</span></p>
+	</div>
+	<!--描述：遮罩 -->
+	<div class="Shade" id="Shade"></div>
+	
+	<!--描述：loading-->
+    <div class="agreeMz">
+        <div id="agreeM">
+        	<img class="loadingImg" src="img/loadingImg.png" />
+        </div>
+    </div>
+    
+    <!--描述：遮罩 -->
+	<div class="Shade1" id="Shade1"></div>
+    <!--描述：个性签名-->
+    <div class="mEdit_userChooseBoxMz">
+        <div id="mEdit_userChooseBoxM">
+	        <div id="mEdit_userChooseBox">
+	        	<p class="mEdit_userChooseTitle">个性签名</p>
+	        	<ul class="mEdit_userSignList">
+	        		
+		        </ul>
+		        <p class="mEdit_btnBox"><span class="mEdit_cancelBtn">取消</span><span class="mEdit_confirmBtn">确认</span></p>
+	        </div>
+        </div>
+    </div>
+    
+    <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</body>
+</html>

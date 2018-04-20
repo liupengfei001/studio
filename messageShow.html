@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>个人工作室</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/messageEdit.css"/>
+    <script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/messageShow.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	function back(){
+			Tiny.execute('back()')
+		}
+    </script>
+</head>
+<body>
+	<div class="messageEdit" id="messageShow" style="margin-bottom:2rem ; -webkit-tap-highlight-color: transparent; -webkit-focus-ring-color: transparent;">
+		<div class="mEdit_userInfo">
+			<div class="mui-input-row mEdit_userHeaderImg">
+				<label>头像</label>
+				<img src="img/mEdit_headerImg.png" class="right mEdit_headerImg" />
+			</div>
+			<p class="mui-input-row">
+		        <label>工作室名称</label>
+		        <span id="mEdit_userStudio">请去编辑工作室名称</span>
+		    </p>
+		    <p class="mui-input-row">
+		        <label>姓名</label>
+		        <span id="mEdit_userName">请去编辑名字</span>
+		    </p>
+		    <p class="mui-input-row">
+		        <label>手机号码</label>
+		        <span id="mEdit_userTel">请去编辑手机号码</span>
+		    </p>
+		    <p class="mui-input-row">
+		        <label>我的二维码</label>
+		        <img src="img/mEdit_myicon.png" class="right mEdit_myicon" />
+		    </p>
+		</div>
+		<div class="mEdit_userInfo mEdit_userCompanyInfo">
+		    <p class="mEdit_userCompanyBox">
+		        <label>个人签名</label>
+		        <p class="mui-input-row" id="mEdit_userSignInfoP">
+		        	<input type="text" id="mEdit_userSignInfo" maxlength="20" readonly="readonly" placeholder="请去编辑个人签名"/>
+		        </p>
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>个人介绍</label>
+		        <textarea rows="3" id="mEdit_userInfo" maxlength="200" readonly="readonly" placeholder="请编辑个人介绍"></textarea>
+		    </p>
+		    <p class="mEdit_userCompanyBox mEdit_userImgP">
+		        <label class="a">个人风采</label>
+		        <div class="mEdit_userImgBox">
+		        	<p>请去上传个人风采的图片</p>
+		        </div>
+		    </p>
+		</div>
+		<div class="mEdit_userHonorInfo">
+			<div class="mEdit_userHonor">
+		        <p class="mEdit_userHonorTitle">获得荣誉</p>
+		        <div class="mEdit_userHonorBox clearFloat">
+		        	<p>请去编辑个人荣誉</p>
+		        </div>
+		    </div>
+		</div>
+		<div class="mEdit_userInfo mEdit_userCompanyInfo">
+			<p class="mui-input-row">
+		        <label>所在公司</label>
+		        <span id="mEdit_userCompanyName">请去编辑公司名称</span>
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>公司简介</label>
+		        <textarea rows="3" id="mEdit_userCompanyInfo" maxlength="200" readonly="readonly" placeholder="请去编辑公司简介"></textarea>
+		    </p>
+		    <p class="mEdit_userCompanyBox">
+		        <label>工作成绩</label>
+		        <textarea rows="3" id="mEdit_userWork" maxlength="200" readonly="readonly" placeholder="请去编辑工作成绩"></textarea>
+		    </p>
+		</div>
+	</div>
+	<!--描述：遮罩 -->
+	<div class="Shade" id="Shade"></div>
+	
+	<!--描述：loading-->
+    <div class="agreeMz">
+        <div id="agreeM">
+        	<img class="loadingImg" src="img/loadingImg.png" />
+        </div>
+    </div>
+    <span class="editBtn">编辑</span>
+    <footer class="footer">
+    	<figure class="a">
+    			<img src="img/index.png" />
+    			<figcaption>工作室</figcaption>
+    	</figure>
+    	<figure class="b">
+    			<img src="img/product.png" />
+    			<figcaption>产品管理</figcaption>
+    	</figure>
+    	<figure class="fBlue c">
+    			<img src="img/message1.png" />
+    			<figcaption>信息管理</figcaption>
+    	</figure>
+    	<figure class="d">
+    			<img src="img/ask.png" />
+    			<figcaption>咨询</figcaption>
+    	</figure>
+    </footer>
+    <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	$('.a').on('click',function(){
+			window.location.href='index.html?siId='+$.getUrlParam('siId')
+		})
+		$('.b').on('click',function(){
+			window.location.href='del.html?siId='+$.getUrlParam('siId')
+		})
+    </script>
+</body>
+</html>

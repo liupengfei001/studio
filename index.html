@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>工作室</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/com.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function back(){
+				Tiny.execute('back()')
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bg_w">
+			<img class="presonal" src="img/photo_wangyi.png"/>
+			<div class="header">
+				<div class="img_w">
+					<img class="img" src=""/>
+				</div>
+				<div class="information">
+					<p class="name"></p>
+					<img class="style" src="img/style.png"/>
+					<p class="introduce"></p>
+				</div>
+				<!--<div class="code_w">
+					<img class="code" src="img/code.png"/>
+				</div>-->
+			</div>
+		</div>
+		<div id="header-w">
+			<p class="title">个人精选</p>
+			<div id="wrapper">
+				<div id="scroller">
+					<ul class="category-list js-category">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="empty">
+				<img class="empty_img" src="img/empty.png"/>
+				<p class="empty_txt">还没有产品，快去增加产品吧</p>
+				<div class="btn_next">
+					添加产品
+				</div>
+			</div>
+			<ul class="list">
+				
+			</ul>
+		</div>
+		<footer class="footer">
+	    	<figure class="fBlue a">
+	    			<img src="img/index1.png" />
+	    			<figcaption>工作室</figcaption>
+	    	</figure>
+	    	<figure class="b">
+	    			<img src="img/product.png" />
+	    			<figcaption>产品管理</figcaption>
+	    	</figure>
+	    	<figure class="c">
+	    			<img src="img/message.png" />
+	    			<figcaption>信息管理</figcaption>
+	    	</figure>
+	    	<figure class="d">
+	    			<img src="img/ask.png" />
+	    			<figcaption>咨询</figcaption>
+	    	</figure>
+	    </footer>
+		<script type="text/javascript">
+			function is_weixin(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+             } else {
+                return false;
+            }
+        }
+		if (!is_weixin()) {
+            $('.footer').css("display","block")
+            $(".btn_next").css('display',"block")
+        }else{
+        	 $('.footer').css("display","none")
+        	 $(".btn_next").css('display',"none")
+        }
+			$('.code').on('click',function(){
+				window.location.href='share.html?siId='+$.getUrlParam('siId')
+			})
+			$('.b').on('click',function(){
+				window.location.href='del.html?siId='+$.getUrlParam('siId')
+			})
+			$('.c').on('click',function(){
+				window.location.href='messageShow.html?siId='+$.getUrlParam('siId')
+			})
+			$('.style').on('click',function(){
+				window.location.href='style.html?siId='+$.getUrlParam('siId')
+			})
+		</script>
+	</body>
+</html>

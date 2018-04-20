@@ -1,0 +1,92 @@
+.share_div_body{
+	/*width: 100%;
+	height: 100%;*/
+	background: url(../img/share_Background.png) no-repeat;
+}
+.share_div_code{
+	width: 5.34rem;
+	height: 7.34rem;
+	margin: 0 auto;
+	margin-top: 0.8rem;
+	background: #ffffff ;
+	box-shadow: 0.03rem 0.02rem 0.24rem 0 rgba(0,0,0,0.10), 0.11rem 0.5rem 0.41rem 0 rgba(102,102,102,0.15);
+	border-radius: 6px;
+}
+.share_img_code{
+	width: 5.34rem;
+	height: 5.94rem;
+	display: block;
+}
+.share_div_name{
+	width: 5.34rem;
+	height: 1.4rem;
+}
+.share_img_icon{
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-top: 0.1rem;
+	margin-left: 0.16rem;
+	display: inline-block;
+	float: left;
+}
+.share_pname{
+	height: .48rem;
+	font-family: SFProDisplay-Semibold;
+	font-size: 0.4rem;
+	color: #000000;
+	letter-spacing: 0.0038rem;
+	margin: 0;
+	margin-left: 0.16rem;
+	margin-top: 0.28rem;
+	float: left;
+} 
+.share_describe{
+	width: 3.22rem;
+	height: .36rem;
+	font-family:  PingFangSC-Regular;
+	font-size: 0.26rem;
+	color: #8A8A8F;
+	letter-spacing: 0.0038rem;
+	margin: 0;
+	float: left;
+	margin-left: 0.16rem;
+	margin-top: 0.02rem;
+}
+.share_div_addall{
+	width: 100%;;
+	height: 1.78rem;
+	margin-top: 0.76rem;
+}
+.share_div_add{
+	width: 1.24rem;
+	height: 100%;
+	float: left;
+	margin-left: 1.94rem;
+}
+.share_div_share{
+	width: 1.24rem;
+	height: 100%;
+	float: left;
+	margin-left: 1.2rem;
+}
+.share_img_add{
+	width: 1.24rem;
+	height: 1.24rem;
+	display: inline-block;
+	float: left;
+}
+.share_p_add{
+	width: 100%;
+	font-family: PingFangSC-Regular;
+	font-size: 0.28rem;
+	color: #222222;
+	margin: 0;
+	text-align: center;
+	float: left;
+	margin-top: 0.14rem;
+}
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

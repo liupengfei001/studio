@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* CSS Document */
+.messageEdit,.creatWorkroom { width: 100%; overflow: hidden;}
+.mEdit_userInfo { padding: 0 0.32rem; margin-bottom: 0.56rem; background: #FFFFFF;}
+.mEdit_userInfo p { line-height: 0.88rem; font-size: 0.32rem; color: #000000; border-bottom: solid 0.02rem #E5E5E5;}
+.mEdit_userInfo p:last-child,.mEdit_userInfo p.mEdit_userImgP { border: none;}
+.mui-input-row.mEdit_userHeaderImg label{ height: 1.2rem; padding: 0; line-height: 1.2rem;}
+.blue { margin-right: 0.03rem; color: #007AFF;}
+.mui-input-row label { width: 1.8rem; height: 0.88rem; padding: 0; line-height: 0.88rem; font-size: 0.32rem; color: #000000;}
+.mui-input-row label~input {
+	width: 4.2rem; height: 0.88rem; padding: 0; margin-right: 0.5rem; font-size: 0.32rem; color: #222222; text-align: right;
+}
+.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+    position: absolute;
+    z-index: 1;
+    top: 0.26rem;
+    right: 0.15rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    text-align: center;
+    color: #999;
+}
+.mEdit_userHeaderImg { position: relative; height: 1.2rem; line-height: 1.2rem; font-size: 0.32rem; color: #000000; border-bottom: solid 0.02rem #E5E5E5;}
+.mEdit_headerImg,.mEdit_headerImg1 { display: inline-block; width: 0.8rem; height: 0.8rem; margin-top: 0.2rem; margin-right: 0.5rem; border-radius: 50%;}
+#mEdit_headerImgForm,#mEdit_headerImgForm1 { position: absolute; top: 0.2rem; right: 0.32rem; opacity: 0; z-index: 1;}
+#file_mEdit_headerImg,#file_mEdit_headerImg1 { width: 0.8rem; height: 0.8rem;}
+#submits_mEdit_headerImg,#submits_mEdit_userImg,#submits_mEdit_headerImg1 { padding: 0; margin: 0; border: none; background: none; width: 0.0001rem; height: 0.0001rem; z-index: -9999;}
+
+.mEdit_myicon { display: inline-block; width: 0.4rem; height: 0.4rem; margin-top: 0.2rem; margin-right: 0.5rem;}
+.mEdit_userCompanyBox { padding: 0.1rem 0;}
+.mEdit_userCompanyBox label { display: block; line-height: 0.5rem;}
+textarea { width: 6.86rem; padding: 0 0.5rem; margin: 0; line-height: 0.4rem; font-size: 0.28rem; color: #222222; border: none;}
+.mEdit_userHonorInfo { margin-bottom: 0.56rem; background: #FFFFFF;}
+.mEdit_userHonorBox { width: 100%;}
+.mEdit_userHonorTitle { padding: 0.16rem 0 0.28rem 0.32rem; line-height: 0.44rem; font-size: 0.32rem; color: #000000;}
+.mEdit_userHonorBox figure { float: left; width: 1.875rem; padding: 0 0.12rem; line-height: 0.28rem; font-size: 0.2rem; text-align: center;}
+.mEdit_userHonorBox figure img.mEdit_honorImg { width: 0.76rem; height: 0.76rem; margin-bottom: 0.04rem;}
+.mEdit_userHonorBox figure img.mEdit_honorImgSel { width: 0.44rem; height: 0.44rem; margin-bottom: 0.16rem;}
+.mEdit_userHonorBox figure figcaption { height: 0.56rem; margin-bottom: 0.12rem;}
+
+.mEdit_appendBtn { position: relative; display: inline-block; width: 2.1rem; height: 2.1rem;}
+.mEdit_addImg { display: inline-block; width: 2.1rem; height: 2.1rem; margin-top: 0.1rem; margin-right: 0.1rem;}
+#mEdit_userImgForm { position: absolute; top: 0; right: 0; opacity: 0; z-index: 1;}
+#file_mEdit_userImg { width: 2.1rem; height: 2.1rem;}
+
+.mEdit_appendImgBox { position: relative; display: inline-block; width: 2.1rem; height: 2.1rem; margin-top: 0.1rem; margin-right: 0.1rem;}
+.mEdit_appendImgBox .mEdit_userImg { display: inline-block; width: 2.1rem; height: 2.1rem;}
+.mEdit_deleteImg { position: absolute; top: 0; left: 0; z-index: 1; display: inline-block; width: 2.1rem; height: 2.1rem;}
+
+.mui-input-row label~span { display: inline-block; width: 4.7rem; height: 0.88rem; padding: 0; margin-right: 0rem; font-size: 0.32rem; color: #222222; text-align: right;}
+.mui-input-row label~b { display: inline-block; width: 4.7rem; padding: 0; margin-right: 0rem; font-size: 0.32rem; font-weight: 300; color: #222222; text-align: right;}
+.mEdit_userSignBox { position: relative;}
+
+.mEdit_changeBtn { position: absolute; top: 0.84rem; right: 0; display: inline-block; width: 1.2rem; height: 0.64rem; line-height: 0.64rem; text-align: center; font-size: 0.30rem; background: #007AFF; color: #FFFFFF;border-radius: 0.02rem;}
+input#mEdit_userSignInfo { width: 5.63rem; height: 0.88rem; padding-left: 0.5rem; margin: 0; font-size: 0.28rem; color: #222222; border: none;}
+#mEdit_userSignInfoP { width: 5.63rem; height: 0.88rem; border: none;}
+
+.Shade1 {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(102,102,102,0.15);
+}
+.mEdit_userChooseBoxMz {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 5.34rem;
+	height: 6.06rem;
+	margin: auto;
+	background: #FFFFFF;
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,0.3);
+	border-radius: 0.06rem;
+}
+.mEdit_userChooseBoxM {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	z-index: 101;
+}
+.mEdit_userChooseTitle { width: 100%; height: 0.44rem; line-height: 0.44rem; margin: 0.32rem 0; font-size: 0.32rem; text-align: center; color: #007AFF;}
+.mEdit_userSignList { height: 3.52rem; padding: 0.2rem 0.59rem; line-height: 0.4rem; font-size: 0.28rem; color: #222222; overflow: scroll;}
+.mEdit_userSignList li { margin-bottom: 0.32rem;}
+.mEdit_userSignList li:last-child { margin-bottom: 0;}
+.mEdit_userSignList li.mEdit_userSignSelected { color: #007AFF;}
+.mEdit_btnBox { margin: 0.32rem 0 0 0; height: 1.04rem; line-height: 1.04rem; font-size: 0.28rem; color: #222222; text-align: center;}
+.mEdit_btnBox span { display: inline-block; width: 2.67rem; letter-spacing: 0.04rem;}
+.mEdit_btnBox span.mEdit_confirmBtn { font-weight: bold; color: #007AFF;}
+
+/*creatWorkroom*/
+.creat_logo { margin-top: 1.54rem;}
+.creat_logo img { display: inline-block; width: 4.56rem; height: 4.08rem; margin-left: 1.78rem;}
+.creat_logoDes { width: 5.18rem; line-height: 0.44rem; margin: 0 auto; margin-top: 0.52rem; font-size: 0.32rem; color: #222222; text-align: center;}
+.creat_link,.mAdd_nextBox,.mEdit_nextBox { width: 100%; margin-top: 0.88rem; text-align: center;}
+.creat_link span,.mAdd_nextBtn,.mEdit_nextBtn { display: inline-block; width: 6.9rem; height: 1rem; line-height: 1rem; font-size: 0.3rem; text-align: center; color: #FFFFFF; background: #007AFF; border-radius: 0.08rem;}
+.mAdd_nextBox { margin: 0.56rem 0;}
+.mEdit_nextBox { position: fixed; left: 0; bottom: 0.75rem;}
+.mEdit_userHonorBox p,.mEdit_userImgBox p { padding-left: 0.82rem; height: 0.88rem; line-height: 0.88rem; font-size: 0.28rem; color: #B2B2B2;}
+
+/*编辑按钮*/
+.btn_edit{
+	width: 6.9rem;
+	height: 1rem;
+	border-radius:.08rem ;
+	background: #007aff;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 1.32rem;
+	left: .3rem;
+	text-align: center;
+	line-height: 1rem;
+	color: #fff;
+	font-size: .3rem;
+	z-index: 1;
+}
+
+
+.footer { width: 100%; padding-bottom: 0.15rem; background: #FEFEF4; border-top: solid 0.02rem #E5E5E5;position: fixed;bottom: 0;}
+.footer:after { clear: both; content: ""; display: block; height: 0; overflow: hidden; visibility: hidden;}
+.footer figure { float: left; width: 25%; padding-top: 0.15rem; text-align: center; }
+.footer figure img { width: 0.44rem; height: 0.44rem;display: block;margin: 0 auto; margin-bottom: 0.1rem;}
+.footer figcaption { display: block; line-height: 0.28rem; font-size: 0.2rem; color: #8A8A8F; letter-spacing: 0.012rem;}
+.fBlue figcaption { color: #007AFF;}
+
+.editBtn,.mEdit_nextBtn { position: fixed; right: 0.32rem; bottom: 1.4rem; width: 1rem; height: 1rem; line-height: 1rem; text-align: center; background: #007AFF; color: #FFFFFF; border-radius: 50%;}
+.mEdit_nextBtn { bottom: 0.4rem;}

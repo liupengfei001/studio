@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加产品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/manage.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/com.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/manage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function back(){
+				window.history.back(-1)
+			}
+		</script>
+	</head>
+	<body style="background: #fff;">
+		<div class="header">
+			
+		
+		<div class="search">
+			<img class="search_img" src="img/search.png"/>
+			<input type="text" name="" id="search_input" placeholder="搜索" />
+		</div>
+		<div id="wrapper">
+				<div id="scroller">
+					<ul class="category-list js-category">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="empty">
+				<img class="empty_img" src="img/empty.png"/>
+				<p class="empty_txt">没有相关产品</p>
+			</div>
+			<ul class="list">
+				
+			</ul>
+			<div class="btn">
+				添加
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		$('.search_img').on('click',function(){
+			if($('#search_input').val()!=""){
+				getProlist("TAG000001",$('#search_input').val())
+			}
+		})
+	</script>
+</html>

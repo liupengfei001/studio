@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			+function(){
+				var width=document.documentElement.clientWidth;
+				var html=document.getElementsByTagName('html')[0];
+				html.style.fontSize=(width/7.5)+"px"
+			}()
+		</script>
+	</head>
+	<body style="height: 100%;">
+		<input type="txt" name="" id="" value="" style="position: fixed;top: 1rem;"/>
+		<div style="width: 100%;height: 100rem;">
+			
+		</div>
+		<footer style="
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 0;
+    background: #000;
+"></footer>
+	</body>
+	<script type="text/javascript">
+		var windheight = $(window).height(); 
+         console.log(windheight)
+	$(window).resize(function(){
+	   var docheight = $(window).height();  
+	   if(docheight < windheight){            
+	      $("footer").css("display","none");
+	   }else{
+	      $("footer").css("display","block");
+	   }           
+	});
+	</script>
+</html>

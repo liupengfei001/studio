@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>创建工作室</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/messageEdit.css"/>
+    <script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="creatWorkroom" style=" -webkit-tap-highlight-color: transparent; -webkit-focus-ring-color: transparent;">
+		<div class="creat_logo">
+			<img src="img/creat_logo.png" />
+		</div>
+		<p class="creat_logoDes">您的工作室还没有建好，只要两步就可以完成创建，快来建设吧~~</p>	
+		<p class="creat_link">
+			<span id="creat_linkBtn">建设我的工作室</span>
+		</p>
+   	</div>   
+   	<script type="text/javascript">
+   		(function ($) {
+		    $.getUrlParam = function (name) {
+		        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		        var r = window.location.search.substr(1).match(reg);
+		        if (r != null) return unescape(r[2]); return null;
+		    }
+		})(jQuery)
+		var brokerId = $.getUrlParam('brokerId');
+		var brokerPhone = $.getUrlParam('brokerPhone');
+		$("#creat_linkBtn").click(function(){
+			window.open("messageADD.html?brokerId=" + brokerId +'&brokerPhone='+ brokerPhone ,"_self");
+		})
+		
+		
+			function back(){
+				Tiny.execute('back()')
+			}
+		
+   	</script>
+</body>
+</html>
