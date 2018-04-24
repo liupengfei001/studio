@@ -22,7 +22,7 @@
 					$('.name').html(res.output.spName)
 					$('.introduce').html(res.output.spSign)
 					$('.presonal').attr('src',res.output.stdLogo)
-					
+//					$('.phone').a
 				},
 				error:function(){
 					console.log("回显错误")
