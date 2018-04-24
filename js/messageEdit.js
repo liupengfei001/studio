@@ -173,11 +173,19 @@ function workroomInfoAjax (data,updateArr) {
 				$("#mEdit_userSignInfo").val(data.output.spSign);
 				$("#mEdit_userInfo").val(data.output.spDesc);
 				if (data.output.spPhotos && data.output.spPhotos != "") {
-					if (data.output.spPhotos.length>0) {
+					if (6>data.output.spPhotos.length>0) {
 						for (var i=0;i<data.output.spPhotos.length;i++) {
 							updateArr.push(data.output.spPhotos[i]);
 							$img = $('<span class="mEdit_appendImgBox"><img src="'+data.output.spPhotos[i]+'" class="mEdit_userImg" /><img src="img/mEdit_delete.png" class="mEdit_deleteImg" /></span>')
 							$(".mEdit_appendBtn").before($img)
+						}
+					}
+					else if (data.output.spPhotos.length >=6) {
+						$(".mEdit_userImgBox").html("");
+						for (var i=0;i<data.output.spPhotos.length;i++) {
+							updateArr.push(data.output.spPhotos[i]);
+							$img = $('<span class="mEdit_appendImgBox"><img src="'+data.output.spPhotos[i]+'" class="mEdit_userImg" /><img src="img/mEdit_delete.png" class="mEdit_deleteImg" /></span>')
+							$(".mEdit_userImgBox").append($img)
 						}
 					}
 				}
@@ -266,15 +274,24 @@ function mEdit_userImgSubmit(brokerId,updateArr) {
 	$(".mEdit_userImgBox").on('click', 'span img.mEdit_deleteImg', function() {
 		var index1 = $(".mEdit_userImgBox img.mEdit_deleteImg").index($(this));
 		delArr.push($(this).attr("src"));
+		$(this).parent().remove();
+		console.log($(".mEdit_userImgBox .mEdit_appendImgBox").length)
 		if($(".mEdit_userImgBox .mEdit_appendImgBox").length < 6) {
-			$(".mEdit_appendBtn").css("display", "inline-block")
+			$pushSpan = $('<span class="mEdit_appendBtn">'+
+				        	'<img src="img/mEdit_add.png" class="mEdit_addImg" />'+
+				        	'<form  id="mEdit_userImgForm" method="post" style="text-align:center;" enctype="multipart/form-data"> '+
+					    		'<input type="file" id="file_mEdit_userImg" name="file" accept="image/*" />'+
+						       	'<input id="submits_mEdit_userImg" type="submit" />'+
+						 	'</form>'+
+				        '</span>')
+			$(".mEdit_userImgBox").append($pushSpan)
 		}
 		for (var i=0; i < updateArr.length; i++) {
 			if ($(this).parent().find("img.mEdit_userImg").attr("src") == updateArr[i]) {
 				updateArr.splice(i, 1);
 			}
 		}
-		$(this).parent().remove();
+		
 		fileArr.splice(index1, 1);
 	})
 	
@@ -392,12 +409,12 @@ function workroomSubmit (brokerId) {
 					var spHonorInfo = newFigure.join(",")
 					console.log(spHonorInfo)
 					var workroomInfo = {
-						companyDesc : $("#mEdit_userCompanyDes").val(),
+						companyDesc : $("#mEdit_userCompanyInfo").val(),
 						companyName : $("#mEdit_userCompanyName").val(),
 						phoneNo : $("#mEdit_userTel").html(),
 						siId : brokerId,
-						spBehavior : $("#mEdit_spBehavior").val(),
-						spDesc : $("#mEdit_userDes").val(),
+						spBehavior : $("#mEdit_userWork").val(),
+						spDesc : $("#mEdit_userInfo").val(),
 						spHonor : spHonorInfo,
 						spName : $("#mEdit_userName").val(),
 						spPhotos : localStorage.getItem("userImgInfo"),
@@ -437,7 +454,7 @@ function workroomSubmitAjax (data) {
 			console.log(data)
 			var dataCode = data.code;
 			if(dataCode == 'SYS_S_000') {
-				window.open("messageShow.html?siId=" + $.getUrlParam('siId'),"_self");
+//				window.open("messageShow.html?siId=" + $.getUrlParam('siId'),"_self");
 			} else {
 				mui.alert(data.desc)
 			}
