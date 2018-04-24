@@ -113,3 +113,4 @@
 //		Tiny.execute("openinformation('prodSaleCode="+xiang+"')")
 	})
 	
+	//Tiny.execute('namefor(2)')

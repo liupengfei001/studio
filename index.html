@@ -14,6 +14,10 @@
 		<script type="text/javascript">
 			function refresh(){
 				window.location.reload();
+				pagename()
+			}
+			function pagename(){
+				Tiny.execute('namefor(1)')
 			}
 		</script>
 	</head>
@@ -55,7 +59,7 @@
 			<ul class="list">
 				
 			</ul>
-			<a class="phone" href="tel:18688888888">打电话</a>
+			<a class="phone" href="">联系他</a>
 		</div>
 		<footer class="footer">
 	    	<figure class="fBlue a">
@@ -87,9 +91,11 @@
 		if (!is_weixin()) {
             $('.footer').css("display","block")
             $(".btn_next").css('display',"block")
+            $('.phone').css('display','none')
         }else{
         	 $('.footer').css("display","none")
         	 $(".btn_next").css('display',"none")
+        	  $('.phone').css('display','block')
         }
 			$('.code').on('click',function(){
 				window.location.href='share.html?siId='+$.getUrlParam('siId')
@@ -101,7 +107,9 @@
 				window.location.href='messageShow.html?siId='+$.getUrlParam('siId')
 			})
 			$('.style').on('click',function(){
-				window.location.href='style.html?siId='+$.getUrlParam('siId')
+				//window.location.href='style.html?siId='+$.getUrlParam('siId')
+				var style='刘style.html?siId='+$.getUrlParam('siId')
+				Tiny.execute("openstyle('style="+style+"')")
 			})
 		</script>
 	</body>
