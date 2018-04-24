@@ -10,7 +10,10 @@ $(function () {
 	
 	//点击编辑
 	$(".editBtn").click(function(){
-		window.open("messageEdit.html?siId=" + siId1,"_self");
+		var xiang="刘messageEdit.html?siId="+siId1;
+		console.log(xiang)
+		Tiny.execute("openinformation('prodSaleCode="+xiang+"')")
+		//window.open("messageEdit.html?siId=" + siId1,"_self");
 	})
 })
 

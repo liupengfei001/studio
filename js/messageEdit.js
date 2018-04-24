@@ -437,6 +437,9 @@ function workroomSubmitAjax (data) {
 			console.log(data)
 			var dataCode = data.code;
 			if(dataCode == 'SYS_S_000') {
+//				var xiang="刘messageEdit.html?siId="+siId1;
+//				console.log(xiang)
+				Tiny.execute("openshow()")
 				window.open("messageShow.html?siId=" + $.getUrlParam('siId'),"_self");
 			} else {
 				mui.alert(data.desc)

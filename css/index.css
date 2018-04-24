@@ -88,6 +88,9 @@ body{
 	width: 4.6rem;
 }
 .name{
+	width: 3rem;
+	white-space: nowrap;
+	overflow-x: scroll;
 	height: .48rem;
 	font-size: .4rem;
 	color: #fff;
@@ -102,8 +105,10 @@ body{
 	margin-top: .32rem;
 }
 .introduce{
+	width: 100%;
 	float: left;
 	font-size: .26rem;
+	margin-top: .1rem;
 	color: #8A8A8F;
 }
 #header-w{
@@ -124,7 +129,7 @@ body{
 .content{
 	width: 100%;
 	background: #22345c;
-	margin-bottom: 1.3rem;
+	padding-bottom: 2.3rem;
 }
 .list{
 	width: 6.7rem;
@@ -142,6 +147,9 @@ body{
 	margin-top: .16rem;
 }
 .item_title{
+	width: 100%;
+	white-space: nowrap;
+	overflow-x:scroll;
 	font-size: .32rem;
 	color: #fff;
 	margin-top: .16rem;
@@ -152,6 +160,9 @@ body{
 	line-height: .44rem;
 }
 .bottom p{
+	width: 4.8rem;
+	white-space: nowrap;
+	overflow-x: scroll;
 	float: left;
 	color: #fff;
 }

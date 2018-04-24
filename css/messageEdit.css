@@ -103,8 +103,8 @@ input#mEdit_userSignInfo { width: 5.63rem; height: 0.88rem; padding-left: 0.5rem
 .creat_link span,.mAdd_nextBtn,.mEdit_nextBtn { display: inline-block; width: 6.9rem; height: 1rem; line-height: 1rem; font-size: 0.3rem; text-align: center; color: #FFFFFF; background: #007AFF; border-radius: 0.08rem;}
 .mAdd_nextBox { margin: 0.56rem 0;}
 .mEdit_nextBox { position: fixed; left: 0; bottom: 0.75rem;}
-.mEdit_userHonorBox p,.mEdit_userImgBox p { padding-left: 0.82rem; height: 0.88rem; line-height: 0.88rem; font-size: 0.28rem; color: #B2B2B2;}
-
+.mEdit_userHonorBox p,.mEdit_userImgBox p { padding-left: 0.82rem; min-height: 0.88rem; line-height: 0.88rem; font-size: 0.28rem; color: #B2B2B2;}
+#mEdit_userCompanyName { text-align: left;}
 /*编辑按钮*/
 .btn_edit{
 	width: 6.9rem;

@@ -40,7 +40,7 @@
 						html+='<li class="item"><div class="top_w"><img class="item_img" src="'+list[i].attachList[0].attachUrl+'"/>'
 						html+='<div class="del" code="'+list[i].prodCode+'"><img class="del_img" src="img/del.png"/><p class="del_txt">删除</p></div></div>'
 						html+='<p class="item_title">'+list[i].prodName+'</p><div class="bottom">'
-						html+='<p>'+list[i].prodDesc+'</p><span class="money">'+list[i].minPrice+'元起</span></div></li>'
+						html+='<p>'+list[i].prodRecmd+'</p><span class="money">'+list[i].minPrice+'元起</span></div></li>'
 					}
 					$('.list').css("display","block")
 					$('.empty').css("display","none")
@@ -107,6 +107,9 @@
 	
 	//跳页
 	$('.del').on('click',function(){
-		window.location.href="manage.html"
+		//window.location.href="manage.html"
+//		var xiang="刘messageEdit.html?siId="+siId1;
+//		console.log(xiang)
+//		Tiny.execute("openinformation('prodSaleCode="+xiang+"')")
 	})
 	

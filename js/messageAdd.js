@@ -309,11 +309,11 @@ function workroomSubmit(brokerId, brokerPhone) {
 				}
 			} else {
 				mui.alert("请输入个人姓名！");
-				$("#mEdit_userName").focus();
+				//$("#mEdit_userName").focus();
 			}
 		} else {
 			mui.alert("请输入个人工作室名称！");
-			$("#mEdit_userStudio").focus();
+			//$("#mEdit_userStudio").focus();
 		}
 	} else {
 		mui.alert("请上传个人头像！");
@@ -332,7 +332,8 @@ function workroomSubmitAjax(data) {
 			if(dataCode == 'SYS_S_000') {
 				$("#Shade").css("display", "none");
 				$(".agreeMz").css("display", "none");
-//				window.open("manage.html?siId=" + data.output.siId, "_self");
+				//window.open("manage.html?first=1&siId=" + data.output.siId, "_self");
+				Tiny.execute('openmessage('+data.output.siId+')')
 			} else {
 				mui.alert(data.desc)
 			}

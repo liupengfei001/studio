@@ -21,6 +21,7 @@
 					$('.img').attr("src",res.output.spPic)
 					$('.name').html(res.output.spName)
 					$('.introduce').html(res.output.spSign)
+					$('.presonal').attr('src',res.output.stdLogo)
 					
 				},
 				error:function(){
@@ -67,7 +68,7 @@
 						for(var i=0,j=list.length;i<j;i++){
 							html+='<li prodSaleCode="'+list[i].prodCode+'" prodCode="'+list[i].prodCodeList[0].prodCode+'" class="item"><img class="item_img" src="'+list[i].attachList[0].attachUrl+'" />'
 							html+='<p class="item_title">'+list[i].prodName+'</p><div class="bottom">'
-							html+='<p>'+list[i].cmpName+'</p><span class="money">'+list[i].minPrice+'元起</span></div></li>'
+							html+='<p>'+list[i].prodRecmd+'</p><span class="money">'+list[i].minPrice+'元起</span></div></li>'
 						}
 						$('.empty').css("display","none")
 						$('.list').css("display","block")
@@ -97,6 +98,9 @@
 		//详情
 		function listOpation(){
 			$(".item").on('click',function(){
-				window.location.href="http://h5.qtoubao.cn/details/index.html?prodSaleCode="+$(this).attr("prodSaleCode")+"&prodCode="+$(this).attr("prodCode")
-			})	
+				var xiang="刘http://h5.qtoubao.cn/details/index.html?prodSaleCode="+$(this).attr("prodSaleCode")+"&prodCode="+$(this).attr("prodCode")
+				//var prodSaleCode=$(this).attr("prodSaleCode")+"prodCode="$(this).attr("prodCode");
+				
+				Tiny.execute("opendetail('prodSaleCode="+xiang+"')")
+			})
 		}

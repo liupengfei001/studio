@@ -46,7 +46,7 @@
 .content{
 	width: 100%;
 	background: #FFFFFF;
-	margin-bottom: 1.3rem;
+	padding-bottom: 2.3rem;
 }
 .list{
 	width: 6.7rem;
@@ -72,6 +72,9 @@
 	
 }
 .item_title{
+	width: 100%;
+	white-space: nowrap;
+	overflow-x:scroll;
 	font-size: .32rem;
 	color: #000000;
 	margin-top: .16rem;
@@ -105,7 +108,7 @@
 .bottom p{
 	width: 5rem;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow-x: scroll;
 	float: left;
 }
 .bottom span{
@@ -114,19 +117,19 @@
 	color: #FF2D55;
 }
 .btn{
-	width: 6.9rem;
-	height: 1rem;
-	border-radius:.08rem ;
-	background: #007aff;
-	margin: 0 auto;
 	position: fixed;
-	bottom: 3.32rem;
-	left: .3rem;
-	text-align: center;
-	line-height: 1rem;
-	color: #fff;
-	font-size: .3rem;
+	bottom: 1.4rem;
+	right: .3rem;
 	z-index: 1;
+	width: 1rem;
+	height: 1rem;
+	line-height: 1rem;
+	margin: 0 auto;
+	font-size: .28rem;
+	border-radius: 50% ;
+	background: #007aff;
+	text-align: center;
+	color: #fff;
 }
 .empty{
 	display: none;

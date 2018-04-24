@@ -30,12 +30,13 @@
 		var brokerId = $.getUrlParam('brokerId');
 		var brokerPhone = $.getUrlParam('brokerPhone');
 		$("#creat_linkBtn").click(function(){
-			window.open("messageADD.html?brokerId=" + brokerId +'&brokerPhone='+ brokerPhone ,"_self");
+			Tiny.execute('openmessageADD()')
+			//window.open("messageADD.html?brokerId=" + brokerId +'&brokerPhone='+ brokerPhone ,"_self");
 		})
 		
 		
 			function back(){
-				Tiny.execute('back()')
+				Tiny.execute('backhome()')
 			}
 		
    	</script>

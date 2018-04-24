@@ -47,13 +47,22 @@
 				success:function(res){
 					console.log(res)
 					if(res.output!=undefined){
-						var list=res.output,html="";
-						console.log(res.output[0].tagList)
+						var list=res.output,html="",arrList=[];
 						for(var i=0,j=list.length;i<j;i++){
-							html+='<li class="item" cmpCode="'+list[i].cmpCode+'" invalidTime="'+list[i].invalidTime+'" prodCode="'+list[i].prodCode+'" prodName="'+list[i].prodName+'"  prodDesc="'+list[i].prodDesc+'" code="1">'
+							var str="",tageList=list[i].tagList;
+							console.log(tageList)
+							for(var m=0,n=tageList.length;m<n;m++){
+								if(str==""){
+									str+=tageList[m].tagCode
+								}else{
+									str+=","+tageList[m].tagCode
+								}
+							}
+							arrList.push(str)
+							html+='<li tagCode="'+arrList[i]+'"  class="item" cmpCode="'+list[i].cmpCode+'" invalidTime="'+list[i].invalidTime+'" prodCode="'+list[i].prodCode+'" prodName="'+list[i].prodName+'"  prodDesc="'+list[i].prodDesc+'" code="1">'
 							html+='<div class="left"><img class="check" src="img/no.png"/></div>'
 							html+='<div class="center"><img class="item_img" src="'+list[i].attachList[0].attachUrl+'"/><div class="item_title">'
-							html+='<p>'+list[i].prodName+'</p><span class="money">'+list[i].minPrice+'元起</span><div class="bottom"><p>'+list[i].cmpName+'</p>'
+							html+='<p>'+list[i].prodName+'</p><span class="money">'+list[i].minPrice+'元起</span><div class="bottom"><p>'+list[i].prodRecmd+'</p>'
 							html+='<span class="ratio">推广费比例16.0%</span></div></div></li>'
 						}
 						$('.list').css("display","block")
@@ -87,6 +96,7 @@
 						"prdCode":$(".item").eq(i).attr('prodCode'),
 						"prdDesc":$(".item").eq(i).attr('prodDesc'),
 						"prdName":$(".item").eq(i).attr('prodName'),
+						"tagCode":$(".item").eq(i).attr('tagCode')
 					}
 					arr.push(str)
 				}
@@ -116,8 +126,9 @@
 						arr=[]
 						if(res.code=="SYS_S_000"){
 							if($.getUrlParam('first')!=undefined){
-								Tiny.execute('yes(1)')
-								window.location.href="index.html?siId="+$.getUrlParam('siId')
+								var siId=$.getUrlParam('siId');
+								Tiny.execute('openindex('+siId+')')
+								//window.location.href="index.html?siId="+$.getUrlParam('siId')
 							}else{
 								getProlist()
 								//mui.alert("添加成功")

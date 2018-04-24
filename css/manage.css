@@ -101,6 +101,8 @@
 }
 .item_title p{
 	width: 4rem;
+    white-space: nowrap;
+    overflow-x: scroll;
 	float: left;
 	font-size: .32rem;
 }
@@ -124,19 +126,16 @@
 	color: #FF2D55;
 }
 .btn{
-	width: 6.9rem;
-	height: 1rem;
-	border-radius:.08rem ;
-	background: #007aff;
-	margin: 0 auto;
 	position: fixed;
-	bottom: .32rem;
-	left: .3rem;
-	text-align: center;
+	right: 0.32rem;
+	bottom: 0.4rem;
+	width: 1rem;
+	height: 1rem;
 	line-height: 1rem;
-	color: #fff;
-	font-size: .3rem;
-	z-index: 1;
+	text-align: center;
+	background: #007AFF;
+	color: #FFFFFF;
+	border-radius: 50%;
 }
 .active{
 	background: #6D6D72;

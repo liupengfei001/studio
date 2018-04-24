@@ -55,7 +55,7 @@ $(function(){
 	}
 
 function userHonorAjax (data,spH) {
-	var spH = [1,2];
+//	var spH = [1,2];
 					
 					//个人荣誉选择
 	var userHonorInfo = {
